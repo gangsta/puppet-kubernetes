@@ -41,6 +41,7 @@ class kubernetes::kubelet (
   file { '/etc/kubernetes/kubelet':
     ensure  => 'file',
     content => epp("kubernetes/etc/kubernetes/kubelet.epp"),
+    require => Package['kubernetes-node'],
   } ~> Service['kubelet']
 
   service { 'kubelet':

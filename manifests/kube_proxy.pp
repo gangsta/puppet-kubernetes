@@ -2,7 +2,10 @@
 # http://kubernetes.io/docs/admin/kube-proxy/
 #
 #
-class kubernetes::kube_proxy {
+class kubernetes::kube_proxy (
+  $ensure             = true,
+  $enable             = true,
+){
 #
 #      case $::osfamily {
 #        'redhat' : {

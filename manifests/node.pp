@@ -19,8 +19,8 @@ class kubernetes::node (
 ) {
 
   file { '/etc/kubernetes/config':
-    ensure  => file,
-    content => epp("kubernetes/etc/kubernetes/config.epp"),
+    ensure  => present,
+    content => epp("kubernetes/etc/kubernetes/node_config.epp"),
     require => Package['kubernetes-node'],
   }
 

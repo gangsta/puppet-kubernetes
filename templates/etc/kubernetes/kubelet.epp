@@ -17,7 +17,7 @@ KUBELET_HOSTNAME="--hostname-override=<%= $kubernetes::kubelet::kubelet_hostname
 KUBELET_API_SERVER="--api-servers=<%= $kubernetes::kubelet::kubelet_api_server %>"
 
 # pod infrastructure container
-KUBELET_POD_INFRA_CONTAINER="--pod-infra-container-image=registry.access.redhat.com/rhel7/pod-infrastructure:latest"
+#KUBELET_POD_INFRA_CONTAINER="--pod-infra-container-image=registry.access.redhat.com/rhel7/pod-infrastructure:latest"
 
 # Add your own!
 KUBELET_ARGS=""
