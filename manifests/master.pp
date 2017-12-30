@@ -14,7 +14,7 @@
 #
 class kubernetes::master (
   $manage_package = true,
-  $ensure         = true,
+  $ensure         = present,
 ) {
   include kubernetes::client
   include kubernetes::config
